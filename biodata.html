@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Shah Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shah<br>Portfolio</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="page-title">Personal Profile</h1>
+        
+        <div class="biodata-card">
+            <h2>Personal Information</h2>
+            <div class="profile-card-layout">
+                <div class="profile-image-container">
+                    <img src="biodataimage/shah.jpg" alt="Muhammad Fazrieshah Profile Photo" class="profile-photo" onclick="openLightbox('biodataimage/shah.jpg')">
+                </div>
+                
+                <div class="profile-details-container">
+                    <div class="info-grid">
+                        <p><strong>Name</strong> <span>: MUHAMMAD FAZRIESHAH BIN MOHD ZIN</span></p>
+                        <p><strong>Gender</strong> <span>: Male</span></p>
+                        <p><strong>Date of Birth</strong> <span>: 11 July 2005</span></p>
+                        <p><strong>Citizenship</strong> <span>: Malaysian</span></p>
+                        <p><strong>Address</strong> <span>: 
+                            <a href="https://www.google.com/maps/search/?api=1&query=no.+413,Jalan+Usaha+28,+Taman+Sri+lambak,+86000+Kluang,+Johor" target="_blank" class="map-link">
+                                No. 413, Jalan Usaha 28, Taman Sri Lambak, 86000 Kluang, Johor (Click for Map)
+                            </a>
+                        </span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="biodata-card">
+            <h2>Hobbies</h2>
+            <div class="hobi-content">
+                <div class="hobi-text">
+                    <ul class="hobi-list">
+                        <li>Jogging</li>
+                        <li>Hiking</li>
+                    </ul>
+                </div>
+                <div class="hobi-images">
+                    <img src="biodataimage/hiking1.jpg" alt="Hiking activity" onclick="openLightbox('biodataimage/hiking1.jpg')">
+                    <img src="biodataimage/jogging.jpg" alt="Jogging activity" onclick="openLightbox('biodataimage/jogging.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <div class="biodata-card">
+            <h2>Favourite Songs (Embedded)</h2>
+            <ul class="skills-list">
+                <li class="skill-item">
+                    <strong>1. Take My Mind</strong> 
+                    <iframe data-testid="embed-iframe" 
+                    style="border-radius:10px" 
+                    src="https://open.spotify.com/embed/track/3bB97PIqXf7WtkKeuYuXFS?utm_source=generator" 
+                    width="100%" 
+                    height="200" 
+                    frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+                </li>
+                <li class="skill-item">
+                    <strong>2. Ngapain Report</strong> 
+                   <iframe data-testid="embed-iframe" 
+                   style="border-radius:12px" 
+                   src="https://open.spotify.com/embed/track/7KCKOvXWgy38wRW76ekqsv?utm_source=generator" 
+                   width="100%" 
+                   height="200" 
+                   frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                   </iframe>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="biodata-card quotes-card">
+            <h2>💭 Inspirational Quotes</h2>
+            <p>"Everyday is a chance to find answer in our prayer."</p>
+            <p style="margin-top: 20px; font-size: 14px;">- Shah</p>
+        </div>
+    </main>
+    
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Lightbox Image">
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Muhammad Fazrieshah Bin Mohd Zin. All Rights Reserved.</p>
+        <p>Contact me at: <a href="mailto:fazrieshah05@gmail.com">fazrieshah05@gmail.com</a></p>
+    </footer>
+    
+    <script>
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

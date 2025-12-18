@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family - Shah Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shah<br>Portfolio</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="page-title">My Beloved Family</h1>
+        
+        <div class="biodata-card family-overview-card">
+            <h2>Our Core Family Unit</h2>
+            <img src="family/myfamily1.jpg" alt="Main Family Photo" class="main-family-photo" onclick="openLightbox('family/myfamily1.jpg')">
+            <p>I am the second child of three siblings. My mother and father are my source of strength and inspiration that Allah SWT has given to me in my life journey to grow and become better. We lived in Kluang, Johor since my father was sent here while in service until he retired from the Malaysian Armed Forces. In my family, I am very inspired by my mother and father who taught me not to give up quickly and to always look for solutions. As my father said, "there is nothing that cannot be done."</p>
+        </div>
+        
+        <div class="members-grid">
+            <div class="biodata-card member-card">
+                <img src="family/family2.jpg" alt="Father's Photo" class="member-photo" onclick="openLightbox('family/family2.jpg')">
+                <h3>Mohd Zin Bin Kasman</h3>
+                <p><strong>Father</strong></p>
+                <p>Someone who is very strict in educating and funny at the same time to entertain our family and is easy for others to approach.</p>
+            </div>
+
+            <div class="biodata-card member-card">
+                <img src="family/family4.jpg" alt="Mother's Photo" class="member-photo" onclick="openLightbox('family/family4.jpg')">
+                <h3>Zaleha Binti Ngaluan</h3>
+                <p><strong>Mother</strong></p>
+                <p>A person who is very cheerful and easy to approach by others. She is also a person who gives a lot of advice to family members.</p>
+            </div>
+            
+            <div class="biodata-card member-card">
+                <img src="family/family3.jpg" alt="Sibling 1 Photo" class="member-photo" onclick="openLightbox('family/family3.jpg')">
+                <h3>Muhammad Shafrizal Bin Mohd Zin</h3>
+                <p><strong>Elder brother</strong></p>
+                <p>A very creative person in the art of drawing, animation and video editing. Watching movies is of course his favorite and reviewing them.</p>
+            </div>
+            
+            <div class="biodata-card member-card">
+                <img src="family/family1.jpg" alt="Sibling 3 Photo" class="member-photo" onclick="openLightbox('family/family1.jpg')">
+                <h3>Muhammad Iman Syafiq Bin Mohd Zin</h3>
+                <p><strong>Younger brother</strong></p>
+                <p>A very brave, big-hearted person and a very talented cricketer since he was in primary school. He had aspirations to represent Malaysia one day.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Lightbox Image">
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Muhammad Fazrieshah Bin Mohd Zin. All Rights Reserved.</p>
+        <p>Contact me at: <a href="mailto:fazrieshah05@gmail.com">fazrieshah05@gmail.com</a></p>
+    </footer>
+    
+    <script>
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

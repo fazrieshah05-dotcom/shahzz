@@ -1,0 +1,781 @@
+/* ============================================
+   STYLE.CSS - CENTRALIZED STYLESHEET
+   Portfolio Website - Muhammad Fazrieshah
+   ============================================ */
+
+/* ==========================================
+   1. GLOBAL STYLES & RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+}
+
+/* Background untuk semua page kecuali index */
+body:not(.home-page) {
+    background-image: url('image/bgimage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Background khusus untuk index/home page */
+body.home-page {
+    background-image: url('image/bgimage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* ==========================================
+   2. HEADER & NAVIGATION
+   ========================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    gap: 20px;
+}
+
+header h1 {
+    text-align: left;
+    margin: 0;
+    flex-shrink: 0;
+    color: white;
+}
+
+/* Clock Container (untuk index.html) */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.time-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+.date-display {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+    color: #90CAF9;
+}
+
+
+/* ==========================================
+   3. MAIN CONTENT AREAS
+   ========================================== */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+/* ==========================================
+   4. HOME PAGE STYLES (index.html)
+   ========================================== */
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 0 0 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+/* ==========================================
+   5. BIODATA PAGE STYLES
+   ========================================== */
+.page-title {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.biodata-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.biodata-card h2 {
+    color: #2a5298;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Profile Card Layout */
+.profile-card-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.profile-details-container {
+    flex-grow: 1;
+}
+
+/* Info Grid */
+.info-grid p {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.info-grid strong {
+    color: #1e3c72;
+}
+
+.map-link {
+    color: #2a5298;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+/* Hobbies Section */
+.hobi-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.hobi-text {
+    flex: 1;
+}
+
+.hobi-images {
+    display: flex;
+    gap: 15px;
+}
+
+.hobi-images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hobi-images img:hover {
+    transform: scale(1.05);
+}
+
+.hobi-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hobi-list li {
+    background-color: #f1f4f9;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 4px solid #2a5298;
+}
+
+/* Skills/Songs List */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-item {
+    background-color: #f1f4f9;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 4px solid #2a5298;
+}
+
+/* Quotes Card */
+.quotes-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.quotes-card h2 {
+    color: white;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.quotes-card p {
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   6. EDUCATION PAGE STYLES
+   ========================================== */
+.education-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.education-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #2a5298;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-header-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.institution-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.card-header-content h2 {
+    color: #1e3c72;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.card-header-content h2 a {
+    color: #1e3c72;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-header-content h2 a:hover {
+    color: #2a5298;
+    text-decoration: underline;
+}
+
+.card-header-content .qualification {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-header-content .duration-gpa {
+    font-style: italic;
+    color: #777;
+    display: block;
+    margin-bottom: 0;
+}
+
+.institution-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.achievement-list {
+    padding-left: 20px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.achievement-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   7. EXPERIENCE PAGE STYLES
+   ========================================== */
+.experience-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.experience-card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 30px;
+    padding: 30px;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.image-grid {
+    flex: 0 0 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.experience-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-content h2 {
+    color: #1e3c72;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 28px;
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 10px;
+}
+
+.experience-content p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* ==========================================
+   8. FAMILY PAGE STYLES
+   ========================================== */
+.family-overview-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-family-photo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-family-photo:hover {
+    transform: scale(1.02);
+}
+
+.family-overview-card p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.member-card {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #90CAF9;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.member-photo:hover {
+    transform: scale(1.1);
+}
+
+.member-card h3 {
+    color: #1e3c72;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.25em;
+}
+
+.member-card p {
+    margin: 5px 0;
+    line-height: 1.4;
+    font-size: 0.95em;
+}
+
+.member-card strong {
+    color: #2a5298;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   9. GALLERY PAGE STYLES
+   ========================================== */
+.gallery-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1;
+    background: white;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ==========================================
+   10. LIGHTBOX
+   ========================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+}
+
+.lightbox-close:hover {
+    color: #90CAF9;
+}
+
+
+/* ==========================================
+   11. FOOTER
+   ========================================== */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+footer a {
+    color: #90CAF9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* ==========================================
+   12. RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet & Medium Screens */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile & Small Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .clock-container {
+        order: 2;
+        margin: 10px 0;
+    }
+    
+    nav {
+        text-align: center;
+        margin-top: 15px;
+        order: 3;
+    }
+    
+    /* Home Page */
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-image {
+        flex: 0 0 auto;
+    }
+    
+    /* Biodata Page */
+    .profile-card-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .info-grid p {
+        grid-template-columns: 1fr;
+    }
+    
+    .hobi-content {
+        flex-direction: column;
+    }
+    
+    .hobi-images {
+        justify-content: center;
+    }
+    
+    /* Education Page */
+    .card-header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Experience Page */
+    .experience-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .image-grid {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    /* Family Page */
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Gallery Page */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
